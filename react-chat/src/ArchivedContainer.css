@@ -1,0 +1,32 @@
+/* .archived-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .chat-list {
+    flex: 1;
+  }
+  
+  .message-view {
+    flex: 3;
+  }
+  
+  .chat-view {
+    padding: 20px;
+    height: 100%;
+    overflow-y: scroll;
+  }
+   */
+
+   .close-btn{
+    border: none;
+    background: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+   }
+
+    .close-btn:hover{
+      color: #ff0000;
+    }

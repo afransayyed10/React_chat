@@ -1,0 +1,361 @@
+[
+    {
+      "id": 1,
+      "name": "Afran",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "messages": [
+                {
+                  "position": "left",
+                  "type": "text",
+                  "text": "Hey, what's up?",
+                  "date": "new Date()",
+                  "icon": "⭐"
+                },
+                {
+                  "position": "right",
+                  "type": "text",
+                  "text": "Not much, you?",
+                  "date": "new Date()"
+                },
+                {
+                  "position": "left",
+                  "type": "text",
+                  "text": "Just wondering if you want to catch the new Spiderman movie this weekend.",
+                  "date": "new Date()",
+                  "icon": "⭐"
+                },
+                {
+                  "position": "right",
+                  "type": "text",
+                  "text": "Sounds good! What time?",
+                  "date": "new Date()",
+                  "icon": "⭐"
+                }
+              ],
+      "unread": 2,
+      "isArchived": false,
+      "isStarred": true,
+      "starredMessages":[
+        {
+          "id": 1,
+          "name": "Afran",
+          "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+          "messages":[
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Hey, what's up?",
+              "date": "new Date()"
+            },
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Just wondering if you want to catch the new Spiderman movie this weekend.",
+              "date": "new Date()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Siddhesh",
+      "avatar": "https://avatars.githubusercontent.com/u/80540635?v=4",
+      "messages": [
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Hey Afran, Please join the POD scrum?",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Yes I will join in few mins",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Yes, please join ASAP.",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Alright, I will join now.",
+          "date": "new Date()",
+          "icon": "⭐"
+        }
+      ],
+      "isArchived": false,
+      "isStarred": true,
+      "starredMessages":[
+        {
+          "id": 2,
+          "name": "Siddhesh",
+          "avatar": "https://avatars.githubusercontent.com/u/80540635?v=4",
+          "messages":[
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Hey Afran, Please join the POD scrum?",
+              "date": "new Date()"
+            },
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Yes, please join ASAP.",
+              "date": "new Date()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sankalp",
+      "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+      "messages": [
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Hey, Are you up for carrom game?",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Yes, I am up for it.",
+          "date": "new Date()",
+          "icon": "⭐",
+          "starred": true
+        },
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Yes, please come in the carrom room.",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Yes coming!",
+          "date": "new Date()",
+          "icon": "⭐"
+        }
+      ],
+      "unread": 1,
+      "isArchived": false,
+      "isStarred": true,
+      "starredMessages":[
+        {
+          "id": 3,
+          "name": "Sankalp",
+          "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+          "messages":[
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Hey, Are you up for carrom game?",
+              "date": "new Date()"
+            },
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Yes, please come in the carrom room.",
+              "date": "new Date()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Amey",
+      "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+      "messages": [
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Hey Afran! How are you?",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "I am fine, you?",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "left",
+          "type": "text",
+          "text": "I have small task for you.",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Yes, pass on the task to me I will do it.",
+          "date": "new Date()",
+          "icon": "⭐"
+        }
+      ],
+      "isArchived": false,
+      "isStarred": true,
+      "starredMessages":[
+        {
+          "id": 4,
+          "name": "Amey",
+          "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+          "messages":[
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Hey Afran! How are you?",
+              "date": "new Date()"
+            },
+            {
+              "position": "left",
+              "type": "text",
+              "text": "I have small task for you.",
+              "date": "new Date()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Prannoy",
+      "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+      "messages": [
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Hey Prannoy! Can you please create a task for me?",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Yes sure, please wait for a while.",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Ok!.",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Please send me the task name and user story.",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Task name \"React Chat App\" and user story \"As a user I want to chat with my friends\".",
+          "date": "new Date()",
+          "icon": "⭐"
+        }
+      ],
+      "unread": 3,
+      "isArchived": false,
+      "isStarred": true,
+      "starredMessages":[
+        {
+          "id": 5,
+          "name": "Prannoy",
+          "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+          "messages": [
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Yes sure, please wait for a while.",
+              "date": "new Date()"
+            },
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Please send me the task name and user story.",
+              "date": "new Date()"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Amol",
+      "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+      "messages": [
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Hey, what's up?",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Not much, you?",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "left",
+          "type": "text",
+          "text": "Just wondering if you want to catch the new Spiderman movie this weekend.",
+          "date": "new Date()",
+          "icon": "⭐"
+        },
+        {
+          "position": "right",
+          "type": "text",
+          "text": "Sounds good! What time?",
+          "date": "new Date()",
+          "icon": "⭐"
+        }
+      ],
+      "isArchived": false,
+      "isStarred": true,
+      "starredMessages":[
+        {
+          "id": 6,
+          "name": "Amol",
+          "avatar": "https://avatars.githubusercontent.com/u/41473129?v=4",
+          "messages":[
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Hey, what's up?",
+              "date": "new Date()"
+            },
+            {
+              "position": "left",
+              "type": "text",
+              "text": "Just wondering if you want to catch the new Spiderman movie this weekend.",
+              "date": "new Date()"
+            }
+          ]
+        }
+      ]
+    }
+]
+  
