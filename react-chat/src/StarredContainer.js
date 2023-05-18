@@ -36,9 +36,9 @@ function StarChatView({ user, onClose }) {
         </div>
       </div>
 
-      <button className='close-btn' onClick={onClose} style={{float: 'right'}}>X</button>
+      {/* <button className='close-btn' onClick={onClose} style={{float: 'right'}}>X</button> */}
       
-      <MessageList
+      {/* <MessageList
         className='message-list'
         lockable={true}
         toBottomHeight={'100%'}
@@ -48,7 +48,7 @@ function StarChatView({ user, onClose }) {
           text: message.text,
           date: new Date(message.timestamp),
         }))}
-      />
+      /> */}
       {/* <button className='close-btn' onClick={onClose}>X</button> */}
     </div>
   );
@@ -80,7 +80,7 @@ const StarredContainer = ({ starredMessages, handleStarredClick, count }) => {
       />
     ))
   ) : (
-    <p>No archived chats.</p>
+    <p>No starred messages.</p>
   )}
   {selectedUser && (
     <div>

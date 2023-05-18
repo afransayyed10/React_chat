@@ -9,11 +9,11 @@ import StarredContainer from "./StarredContainer";
 
 
 const ChatHeader = ({ user, onArchiveChat, isArchived }) => {
-  const [archived, setArchived] = useState(isArchived);
+  // const [archived, setArchived] = useState(isArchived);
   // const [archived, setArchived] = useState(user.archived);
   const handleArchiveClick = () => {
-    setArchived(!archived);
-    onArchiveChat(user, !archived);
+    // setArchived(!isArchived);
+    onArchiveChat(user, !isArchived);
     // const updatedArchived = !archived;
     // setArchived(updatedArchived);
     // onArchiveChat(user.id, updatedArchived);
@@ -26,7 +26,7 @@ const ChatHeader = ({ user, onArchiveChat, isArchived }) => {
         <h2>{user.name}</h2>
         <p style={{ color: user.status === "online" ? "green" : "gray" }}>{user.status === "online" ? "Online" : "Offline"}</p>
         <button className="archive-button" onClick={handleArchiveClick}>
-          {archived ? "Unarchive" : "Archive"}
+          {user.isArchived ? "Unarchive" : "Archive"}
         </button>
       </div>
     </div>
@@ -59,7 +59,7 @@ const App = () => {
   }, []);
 
   const handleUserClick = (user) => {
-    setSelectedUser(user);
+    setSelectedUser((prevUser) => (prevUser === user? null : user));
     setMessages(user.messages);
     const updatedUsers = users.map((u) => {
       if (u.id === user.id) {
@@ -100,22 +100,42 @@ const App = () => {
 
  
 
-  const handleArchiveChat = (user, isArchived, onArchiveChat) => {
-    const updatedUsers = users.map(u => {
+  // const handleArchiveChat = (user, isArchived, onArchiveChat) => {
+  //   const updatedUsers = users.map(u => {
+  //     if (u.id === user.id) {
+  //       return {...u, isArchived};
+  //     }
+  //     return u;
+  //   });
+  //   setUsers(updatedUsers);
+  //   if (isArchived) {
+  //     setArchivedChats([...archivedChats, user]);
+  //   } else {
+  //     setArchivedChats(archivedChats.filter((chat) => chat.id !== user.id));
+  //   }
+  
+  //   return { ...user, isArchived };
+  // };
+
+  const handleArchiveChat = (user) => {
+    const updatedUsers = users.map((u) => {
       if (u.id === user.id) {
-        return {...u, isArchived};
+        const updatedUser = { ...u, isArchived: !u.isArchived };
+        if (selectedUser && selectedUser.id === user.id) {
+          setSelectedUser(updatedUser);
+        }
+        return updatedUser;
       }
       return u;
     });
     setUsers(updatedUsers);
-    if (isArchived) {
-      setArchivedChats([...archivedChats, user]);
+    if (user.isArchived) {
+      setArchivedChats(archivedChats.filter((chat) => chat.id !== user.id));
     } else {
-      setArchivedChats(archivedChats.filter(chat => chat.id !== user.id));
+      setArchivedChats([...archivedChats, user]);
     }
-  
-    return { ...user, isArchived };
   };
+  
 
 
   // const archiveUser = (id) => {
@@ -374,7 +394,7 @@ console.log(selectedUser);
       <div style={{ flex: "1", padding: "20px" }}>
         {selectedUser ? (
           <>
-          <ChatHeader user={selectedUser} onArchiveChat={handleArchiveChat} isArchived={false} />
+          <ChatHeader user={selectedUser} onArchiveChat={handleArchiveChat} isArchived={selectedUser && selectedUser.isArchived} />
             <MessageList
               messages={messages}
               className='message-list'
