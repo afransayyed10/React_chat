@@ -42,6 +42,7 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
   const [archivedChats, setArchivedChats] = useState([]);
   const [starredMessages, setStarredMessages] = useState([]);
+  const [starredChats, setStarredChats] = useState([])
   const [showArchived, setShowArchived] = useState(false);
   const [showStarred, setShowStarred] = useState(false);
   const [starred, setStarred] = useState(false);
@@ -168,12 +169,13 @@ const App = () => {
   user.name.toLowerCase().includes(searchValue.toLowerCase())
 );
 
-
 const handleStarredClick = (message) => {
-  const index = starredMessages.indexOf(message);
+  const index = starredMessages.findIndex((starredMessage) => starredMessage.id === message.id);
+
   if (index === -1) {
     // Message is not already starred
-    setStarredMessages([...starredMessages, message]);
+    const updatedStarredMessages = [...starredMessages, message];
+    setStarredMessages(updatedStarredMessages);
     setMessages((prevMessages) =>
       prevMessages.map((prevMessage) =>
         prevMessage.id === message.id ? { ...prevMessage, starred: true } : prevMessage
@@ -181,16 +183,14 @@ const handleStarredClick = (message) => {
     );
   } else {
     // Message is already starred
-    const newStarredMessages = [...starredMessages];
-    newStarredMessages.splice(index, 1);
-    setStarredMessages(newStarredMessages);
+    const updatedStarredMessages = starredMessages.filter((starredMessage) => starredMessage.id !== message.id);
+    setStarredMessages(updatedStarredMessages);
     setMessages((prevMessages) =>
       prevMessages.map((prevMessage) =>
         prevMessage.id === message.id ? { ...prevMessage, starred: false } : prevMessage
       )
     );
   }
-  
 };
 
  // function to handle checkbox change
@@ -426,6 +426,7 @@ console.log(selectedUser);
                       subtitle: message.date.toLocaleString(),
                       avatarFlexible: true,
                       icon: selectedUser.isStarred ? 'star' : null,
+                      key: message.id,
               }))}
           />
 
