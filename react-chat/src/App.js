@@ -8,7 +8,7 @@ import ArchivedContainer from "./ArchivedContainer";
 import StarredContainer from "./StarredContainer";
 
 
-const ChatHeader = ({ user, onArchiveChat, isArchived }) => {
+const ChatHeader = ({ user, onArchiveChat, isArchived, onStarredClick, isStarred }) => {
   // const [archived, setArchived] = useState(isArchived);
   // const [archived, setArchived] = useState(user.archived);
   const handleArchiveClick = () => {
@@ -19,15 +19,23 @@ const ChatHeader = ({ user, onArchiveChat, isArchived }) => {
     // onArchiveChat(user.id, updatedArchived);
     console.log(user);
   };
+
+    const handleStarClick = () => {
+    onStarredClick(user, !isStarred);
+  };
+
   return (
     <div style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
       <img src={user.avatar} alt={user.name} style={{ width: "50px", height: "50px", borderRadius: "50%", marginRight: "20px" }} />
       <div>
-        <h2>{user.name}</h2>
+        <h2>{user.name}<button className="star-button" onClick={handleStarClick}>
+          {isStarred ? '⭐' : '☆'}
+        </button></h2>
         <p style={{ color: user.status === "online" ? "green" : "gray" }}>{user.status === "online" ? "Online" : "Offline"}</p>
         <button className="archive-button" onClick={handleArchiveClick}>
           {user.isArchived ? "Unarchive" : "Archive"}
         </button>
+ 
       </div>
     </div>
   );
@@ -394,7 +402,8 @@ console.log(selectedUser);
       <div style={{ flex: "1", padding: "20px" }}>
         {selectedUser ? (
           <>
-          <ChatHeader user={selectedUser} onArchiveChat={handleArchiveChat} isArchived={selectedUser && selectedUser.isArchived} />
+          <ChatHeader user={selectedUser} onArchiveChat={handleArchiveChat} isArchived={selectedUser && selectedUser.isArchived} onStarredClick={handleStarredClick}
+            isStarred={selectedUser && selectedUser.isStarred} />
             <MessageList
               messages={messages}
               className='message-list'
@@ -416,11 +425,11 @@ console.log(selectedUser);
                       }}
                     >
                       <p>{selectedUser.name}</p>
-                      <button className="star" onClick={() => handleStarredClick(selectedUser, true)}>
+                      {/* <button className="star" onClick={() => handleStarredClick(selectedUser, true)}>
                         {selectedUser.isStarred
                           ? '☆' // add logics here ex. message.isStarred ? 'filled star' : 'unfilled star'
                           : '⭐'}
-                      </button>
+                      </button> */}
                     </div>
                   ) : null,
                       subtitle: message.date.toLocaleString(),

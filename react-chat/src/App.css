@@ -100,6 +100,12 @@
 
 }
 
+.star-button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .chats{
   cursor: pointer;
   font-size: 20px;
@@ -122,13 +128,12 @@
   font-size: medium;
 }
 
-.star{
+/* .star{
   border: none;
   background: none;
   cursor: pointer;
-  /* color: grey; */
   margin-left: 30px;
-}
+} */
 
 /* .starred {
   color: yellow;
